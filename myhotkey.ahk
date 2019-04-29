@@ -1,3 +1,8 @@
+﻿;# 号代表 Win 键；
+;! 号代表 Alt 键；
+;^ 号代表 Ctrl 键；
+;+ 号代表 shift 键；
+
 ;===========================;Media Control
 Scrolllock::
 SoundSet +3, MASTER
@@ -70,3 +75,51 @@ Send, {Right}
 else
 Send, +{Right}
 return
+
+;===========================;模拟鼠标滑轮上下滑动
+CapsLock & m::
+MouseClick,Wheelup,,,3,0,D,R
+return
+
+CapsLock & n::
+MouseClick,WheelDown,,,3,0,D,R
+return
+
+
+;===========================;open cmder
+^!t::
+run, cmder
+return
+
+CapsLock & f::
+Run C:\Program Files\Everything\Everything.exe 
+return
+
+
+CapsLock & s:: ; 快速谷歌搜索
+Send ^c 
+Run, google http://www.google.com.hk/search?q=%clipboard% 
+return
+
+
+CapsLock & b::
+Run https://www.bilibili.com/
+return
+
+
+;===========================;input comand
+:://m:: ;输入我的邮箱
+Send iamjohnrain@163.com 
+return
+
+^+c::  ; 复制文件的路径，
+; null= 
+send ^c
+sleep,200
+clipboard=%clipboard% ;%null%
+tooltip,%clipboard%
+sleep,500
+tooltip,
+return
+
+

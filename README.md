@@ -33,3 +33,9 @@
 `CapsLock + o` → 光标到句尾(end键)
 
 `CapsLock + p` → 向下翻页
+
+
+
+### 常用输入
+
+iamjohnrain@163.com

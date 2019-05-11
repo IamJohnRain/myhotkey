@@ -88,7 +88,7 @@ return
 
 ;===========================;open cmder
 ^!t::
-run, cmder
+run, C:\cmder\Cmder.exe
 return
 
 CapsLock & f::
@@ -98,7 +98,7 @@ return
 
 CapsLock & s:: ; 快速谷歌搜索
 Send ^c 
-Run, google http://www.google.com.hk/search?q=%clipboard% 
+Run https://scholar.google.com/
 return
 
 

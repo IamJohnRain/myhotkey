@@ -15,10 +15,11 @@ Return
 Pause::Send {Media_Play_Pause}
 return
 ;===========================;Replace CapsLock
-^CapsLock::CapsLock
-Return
-CapsLock::Send {Esc}
-return
+Process Priority,,High
+SetCapsLockState, AlwaysOff  
+CapsLock::
+Send {Esc}
+returnQqWq
 ;===========================;U = PageDown
 CapsLock & u::
 if getkeystate("shift") = 0

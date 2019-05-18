@@ -38,4 +38,23 @@
 
 ### 常用输入
 
-iamjohnrain@163.com
+`//m`:  iamjohnrain@163.com
+
+`//pip`: -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+使用: 
+
+```
+pip install jieba //pip  ## 编程↓
+pip install jieba -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+
+
+### 常用网站
+
+`CapsLock + s` : Google scholar
+
+`CapsLock + f` : Google Translation
+
+`CapsLock + b` : Bilibili

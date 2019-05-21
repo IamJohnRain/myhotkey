@@ -12,14 +12,18 @@ PrintScreen::
 SoundSet -3, MASTER
 ;SoundSet, -3,WAVE
 Return
+
+CapsLock & PrintScreen::Media_Prev
+CapsLock & Scrolllock::Media_Next
+
 Pause::Send {Media_Play_Pause}
 return
 ;===========================;Replace CapsLock
-Process Priority,,High
-SetCapsLockState, AlwaysOff  
-CapsLock::
-Send {Esc}
-returnQqWq
+;^CapsLock::CapsLock
+;Return
+CapsLock::Send {Esc}
+
+
 ;===========================;U = PageDown
 CapsLock & u::
 if getkeystate("shift") = 0
@@ -89,11 +93,11 @@ return
 
 ;===========================;open cmder
 ^!t::
-run, C:\cmder\Cmder.exe
+run, cmder
 return
 
-CapsLock & f::
-Run C:\Program Files\Everything\Everything.exe 
+CapsLock & f::  ; 谷歌翻译
+Run http://translate.google.com/
 return
 
 
@@ -109,9 +113,26 @@ return
 
 
 ;===========================;input comand
-:://m:: ;输入我的邮箱
+::\\m:: ;输入我的邮箱
 Send iamjohnrain@163.com 
 return
+
+::\\pip:: ; 输入pip清华源
+Send -i https://pypi.tuna.tsinghua.edu.cn/simple
+return
+
+::\\sr1:: ; 输入服务器IP
+Send 172.18.219.166
+return
+
+::\\sr2:: ; 输入服务器IP
+Send 172.18.217.24
+return
+
+::\\sr3:: ; 输入服务器IP
+Send 172.18.218.121
+return
+
 
 ^+c::  ; 复制文件的路径，
 ; null= 
@@ -122,5 +143,8 @@ tooltip,%clipboard%
 sleep,500
 tooltip,
 return
+
+
+
 
 
